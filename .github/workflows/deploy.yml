@@ -3,8 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 # Allow one concurrent deployment
 concurrency:
@@ -40,8 +38,14 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: List dist contents
+        run: ls -la dist/
+        
+      - name: Show index.html content
+        run: cat dist/index.html
+        
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
