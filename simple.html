@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magigo Trading - Simple Test</title>
+    <link rel="icon" type="image/jpg" href="/magigo_website/images/MAGIGO-TRADING-COMPANY-02.jpg" />
+    <link rel="stylesheet" href="/magigo_website/assets/index-DsM-flwX.css">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            text-align: center;
+        }
+        .logo { max-width: 200px; margin: 20px auto; }
+        .success { color: green; }
+        .loading { color: orange; }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="/magigo_website/images/MAGIGO-TRADING-COMPANY-02.jpg" alt="Magigo Trading" style="max-width: 100%;">
+    </div>
+    
+    <h1>Magigo Trading Company</h1>
+    <p class="loading">🔄 Testing asset loading...</p>
+    <div id="status"></div>
+    
+    <p><a href="/magigo_website/static.html">→ Go to detailed test page</a></p>
+    
+    <script src="/magigo_website/assets/index-Cql6DlWz.js"></script>
+    <script>
+        document.getElementById('status').innerHTML = '<p class="success">✅ All assets loaded successfully!</p>';
+        console.log('✅ Simple version loaded successfully');
+    </script>
+</body>
+</html>

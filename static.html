@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magigo Trading - Working Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>🎉 GitHub Pages is Working!</h1>
+    <p>This is a simple static version to test deployment.</p>
+    <p>If you can see this page, then GitHub Pages is correctly serving files from your repository.</p>
+    
+    <h2>Asset Tests:</h2>
+    <div id="test-results"></div>
+    
+    <h2>Navigation Test:</h2>
+    <ul>
+        <li><a href="/magigo_website/">Home (will load React app)</a></li>
+        <li><a href="/magigo_website/static.html">This static page</a></li>
+        <li><a href="/magigo_website/asset-test.html">Asset test page</a></li>
+    </ul>
+    
+    <script>
+        const results = document.getElementById('test-results');
+        
+        // Test if assets exist
+        function testAsset(url, name) {
+            fetch(url)
+                .then(response => {
+                    if (response.ok) {
+                        results.innerHTML += `<p class="success">✅ ${name}: Found</p>`;
+                    } else {
+                        results.innerHTML += `<p class="error">❌ ${name}: ${response.status} ${response.statusText}</p>`;
+                    }
+                })
+                .catch(error => {
+                    results.innerHTML += `<p class="error">❌ ${name}: Network error</p>`;
+                });
+        }
+        
+        // Test all assets
+        testAsset('/magigo_website/assets/index-Cql6DlWz.js', 'JavaScript File');
+        testAsset('/magigo_website/assets/index-DsM-flwX.css', 'CSS File');
+        testAsset('/magigo_website/images/MAGIGO-TRADING-COMPANY-02.jpg', 'Image File');
+        
+        console.log('Current URL:', window.location.href);
+        console.log('Current pathname:', window.location.pathname);
+    </script>
+</body>
+</html>
