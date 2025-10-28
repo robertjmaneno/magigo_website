@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img
-                src={getImageUrl("images/MAGIGO TRADING COMPANY-02.jpg")}
+                src={getImageUrl("images/MAGIGO-TRADING-COMPANY-02.jpg")}
                 alt="Magigo Trading Company Logo"
                 className="h-12 w-24"
               />

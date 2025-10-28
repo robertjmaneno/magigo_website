@@ -63,9 +63,9 @@ const Navbar = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <img 
-                src={getImageUrl("images/MAGIGO TRADING COMPANY-02.jpg")} 
-                alt="Magigo Trading Company Logo" 
+              <img
+                src={getImageUrl("images/MAGIGO-TRADING-COMPANY-02.jpg")} 
+                alt="Magigo Trading Company Logo"
                 className="h-14 w-auto object-contain bg-white rounded px-1 py-2 shadow-sm"
               />
             </Link>
