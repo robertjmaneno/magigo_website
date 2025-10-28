@@ -1,0 +1,4 @@
+/* Wrapper stylesheet that imports the hashed production CSS bundle.
+   This provides a stable filename (assets/main.css) so Pages can be
+   forced to fetch a fresh file when needed. */
+@import "./index-DsM-flwX.css";
