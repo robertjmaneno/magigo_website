@@ -2,6 +2,7 @@ import { Target, Eye, Heart, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { getImageUrl } from "@/lib/imageUtils";
 
 const About = () => {
   const values = [
@@ -34,7 +35,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img
-                src="/images/main_image_one.png"
+                src={getImageUrl("images/main_image_one.png")}
                 alt="Magigo Trading"
                 className="w-5/6 h-auto mx-auto"
               />
@@ -134,7 +135,7 @@ const About = () => {
                   <div className="text-center">
                     <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 transition-transform duration-300 group-hover:scale-105">
                       <img
-                        src="/images/Team/professional-young-man-stockcake.jpg"
+                        src={getImageUrl("images/Team/professional-young-man-stockcake.jpg")}
                         alt="Robert Magigo"
                         className="w-full h-full object-cover"
                       />

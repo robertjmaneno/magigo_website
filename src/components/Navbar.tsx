@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getImageUrl } from "@/lib/imageUtils";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +64,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img 
-                src="/images/MAGIGO TRADING COMPANY-02.jpg" 
+                src={getImageUrl("images/MAGIGO TRADING COMPANY-02.jpg")} 
                 alt="Magigo Trading Company Logo" 
                 className="h-14 w-auto object-contain bg-white rounded px-1 py-2 shadow-sm"
               />

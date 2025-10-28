@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Facebook, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getImageUrl } from "@/lib/imageUtils";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img
-                src="/images/MAGIGO TRADING COMPANY-02.jpg"
+                src={getImageUrl("images/MAGIGO TRADING COMPANY-02.jpg")}
                 alt="Magigo Trading Company Logo"
                 className="h-12 w-24"
               />

@@ -3,25 +3,26 @@ import HeroCarousel from "@/components/HeroCarousel";
 import SubsidiaryCard from "@/components/SubsidiaryCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { getImageUrl, getBackgroundImageStyle } from "@/lib/imageUtils";
 
 const Home = () => {
   const clientsAndPartners = [
-    "/images/Partners/Ekhaya logo.png",
-    "/images/Partners/nbm_plc_logo.png",
-    "/images/Partners/nbs-bank.png",
-    "/images/Partners/nyasa.png",
-    "/images/Partners/mac.png",
-    "/images/Partners/saf.png",
-    "/images/Partners/standard.png",
-    "/images/Partners/portland-cement-logo-hauxin-malawi.png",
-    "/images/Partners/premanade medical centre logo.png",
-    "/images/Partners/Tiyende logo.png",
-    "/images/Partners/logo.svg",
-    "/images/Partners/eco-logo-svg.svg",
-    "/images/Partners/shayoma.svg",
-    "/images/Partners/tnm-logo-1.0dd9a10.svg",
-    "/images/Partners/total.svg",
-    "/images/Partners/FDHLogo.webp",
+    "images/Partners/Ekhaya logo.png",
+    "images/Partners/nbm_plc_logo.png",
+    "images/Partners/nbs-bank.png",
+    "images/Partners/nyasa.png",
+    "images/Partners/mac.png",
+    "images/Partners/saf.png",
+    "images/Partners/standard.png",
+    "images/Partners/portland-cement-logo-hauxin-malawi.png",
+    "images/Partners/premanade medical centre logo.png",
+    "images/Partners/Tiyende logo.png",
+    "images/Partners/logo.svg",
+    "images/Partners/eco-logo-svg.svg",
+    "images/Partners/shayoma.svg",
+    "images/Partners/tnm-logo-1.0dd9a10.svg",
+    "images/Partners/total.svg",
+    "images/Partners/FDHLogo.webp",
   ];
 
   const subsidiaries = [
@@ -98,7 +99,7 @@ const Home = () => {
             </div>
             <div>
               <img
-                src="/images/trading_company.jpg"
+                src={getImageUrl("images/trading_company.jpg")}
                 alt="Magigo Trading Company"
                 className="w-full h-auto max-h-80 object-contain rounded-xl"
               />
@@ -158,7 +159,7 @@ const Home = () => {
                   className="flex-shrink-0 mx-4 flex items-center justify-center"
                 >
                   <img
-                    src={logo}
+                    src={getImageUrl(logo)}
                     alt={`Client/Partner ${index + 1}`}
                     className="h-16 w-auto object-contain"
                   />
@@ -171,7 +172,7 @@ const Home = () => {
                   className="flex-shrink-0 mx-4 flex items-center justify-center"
                 >
                   <img
-                    src={logo}
+                    src={getImageUrl(logo)}
                     alt={`Client/Partner ${index + 1}`}
                     className="h-16 w-auto object-contain"
                   />
@@ -183,7 +184,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white relative" style={{backgroundImage: 'url("/images/ready_to_work_with_us.jpg")'}}>
+      <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white relative" style={getBackgroundImageStyle("images/ready_to_work_with_us.jpg")}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>

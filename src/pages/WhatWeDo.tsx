@@ -1,12 +1,13 @@
 import { Building2, Cpu, Sprout, MapPin, Wallet } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { getBackgroundImageStyle } from "@/lib/imageUtils";
 
 const WhatWeDo = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative flex items-end justify-center pb-16 md:pb-20" style={{backgroundImage: 'url("/images/ready_to_work_with_us.jpg")'}}>
+      <section className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative flex items-end justify-center pb-16 md:pb-20" style={getBackgroundImageStyle("images/ready_to_work_with_us.jpg")}>
         <div className="absolute inset-0 bg-black/75"></div>
         <div className="container mx-auto px-4 text-center relative z-10 w-full flex justify-center">
           <div className="max-w-4xl text-center">
