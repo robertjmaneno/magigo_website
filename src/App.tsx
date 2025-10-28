@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/magigo_website">
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
