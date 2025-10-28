@@ -232,13 +232,10 @@ This project is built with:
 - Tailwind CSS
 
 ## How can I deploy this project?
+This website is deployed using GitHub Pages.
 
-Simply open [Lovable](https://lovable.dev/projects/91af1a1f-2288-4ac6-8570-614ded796b9f) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+The website is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Visit the live site at: https://robertjmaneno.github.io/magigo_website/
