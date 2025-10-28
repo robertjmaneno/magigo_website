@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asset Test - Magigo Website</title>
+</head>
+<body>
+    <h1>Asset Test Page</h1>
+    <p>Testing asset accessibility:</p>
+    <ul>
+        <li><a href="/magigo_website/assets/index-Cql6DlWz.js" target="_blank">JavaScript File</a></li>
+        <li><a href="/magigo_website/assets/index-DsM-flwX.css" target="_blank">CSS File</a></li>
+        <li><a href="/magigo_website/images/MAGIGO-TRADING-COMPANY-02.jpg" target="_blank">Image File</a></li>
+    </ul>
+    <p>Timestamp: October 28, 2025 - Asset test</p>
+    
+    <script>
+        console.log('Testing asset loading...');
+        
+        // Test CSS loading
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/magigo_website/assets/index-DsM-flwX.css';
+        link.onload = () => console.log('✅ CSS loaded successfully');
+        link.onerror = () => console.log('❌ CSS failed to load');
+        document.head.appendChild(link);
+        
+        // Test JS loading
+        const script = document.createElement('script');
+        script.src = '/magigo_website/assets/index-Cql6DlWz.js';
+        script.onload = () => console.log('✅ JS loaded successfully');
+        script.onerror = () => console.log('❌ JS failed to load');
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>
