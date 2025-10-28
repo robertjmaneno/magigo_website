@@ -1,7 +1,7 @@
 /**
  * Helper function to get the correct image URL for deployment
  * Automatically prepends the base path for GitHub Pages deployment
- * Updated: October 28, 2025
+ * Updated: October 28, 2025 - Logo filename fix deployed
  */
 export function getImageUrl(imagePath: string): string {
   // Remove leading slash if present to avoid double slashes
