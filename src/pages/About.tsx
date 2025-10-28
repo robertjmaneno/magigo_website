@@ -2,7 +2,7 @@ import { Target, Eye, Heart, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { getImageUrl } from "@/lib/imageUtils";
+import { getImageUrl, getBackgroundImageStyle } from "@/lib/imageUtils";
 
 const About = () => {
   const values = [
@@ -17,7 +17,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative flex items-end justify-center pb-16 md:pb-20" style={{backgroundImage: 'url("/images/ready_to_work_with_us.jpg")'}}>
+      <section className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative flex items-end justify-center pb-16 md:pb-20" style={getBackgroundImageStyle("images/ready_to_work_with_us.jpg")}>
         <div className="absolute inset-0 bg-black/75"></div>
         <div className="container mx-auto px-4 text-center relative z-10 w-full flex justify-center">
           <div className="max-w-4xl text-center">
@@ -181,7 +181,7 @@ const About = () => {
                     <div className="text-center">
                       <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 transition-transform duration-300 group-hover:scale-105">
                         <img
-                          src={member.image}
+                          src={getImageUrl(member.image)}
                           alt={member.name}
                           className="w-full h-full object-cover"
                         />
@@ -235,7 +235,7 @@ const About = () => {
                     <div className="text-center">
                       <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 transition-transform duration-300 group-hover:scale-105">
                         <img
-                          src={member.image}
+                          src={getImageUrl(member.image)}
                           alt={member.name}
                           className="w-full h-full object-cover"
                         />
