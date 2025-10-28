@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { toast } from "react-toastify";
+import { getBackgroundImageStyle } from "@/lib/imageUtils";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -76,7 +77,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative flex items-end justify-center pb-16 md:pb-20" style={{backgroundImage: 'url("/images/ready_to_work_with_us.jpg")'}}>
+      <section className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative flex items-end justify-center pb-16 md:pb-20" style={getBackgroundImageStyle("images/ready_to_work_with_us.jpg")}>
         <div className="absolute inset-0 bg-black/75"></div>
         <div className="container mx-auto px-4 text-center relative z-10 w-full flex justify-center">
           <div className="max-w-4xl text-center">
@@ -364,7 +365,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white relative" style={{backgroundImage: 'url("/images/ready_to_work_with_us.jpg")'}}>
+      <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white relative" style={getBackgroundImageStyle("images/ready_to_work_with_us.jpg")}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>
