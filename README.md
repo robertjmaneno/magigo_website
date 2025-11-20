@@ -1,5 +1,7 @@
 # Magigo Trading Company Website
 
+<!-- Trigger deployment -->
+
 ![Magigo Trading](public/images/MAGIGO-TRADING-COMPANY-02.jpg)
 
 A modern, responsive website for Magigo Trading Company (MTC), showcasing sustainable development solutions across Malawi and the region. The website highlights our four specialized subsidiaries: Magigo Hardware, Magigo Systems, Seah Farms, and Magigo Mobile Money.
