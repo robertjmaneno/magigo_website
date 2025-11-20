@@ -14,7 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: write
+      contents: read
+      pages: write
+      id-token: write
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
       - name: Checkout
@@ -32,9 +38,14 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Deploy to gh-pages branch
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: dist
+          path: './dist'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
