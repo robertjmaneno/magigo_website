@@ -21,7 +21,7 @@ const slides = [
   {
     title: "Complete IT Solutions",
     description: "Innovative technology services for individuals and enterprises",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+    image: "images/s3 (2).jpg",
     button1: "Get a Quote Now",
     button2: "More Info",
   },
@@ -66,7 +66,7 @@ const HeroCarousel = () => {
               {/* Text Content */}
               <div className="space-y-8 animate-fade-in">
                 <div className="space-y-4">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
                     {slide.title}
                   </h1>
                   <p className="text-lg md:text-xl text-white/90 leading-relaxed">
