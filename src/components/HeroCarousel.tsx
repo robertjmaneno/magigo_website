@@ -8,16 +8,29 @@ const slides = [
     title: "Building Sustainable Communities",
     description: "Providing comprehensive development solutions across Malawi",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
+    button1: "Get a Quote Now",
+    button2: "More Info",
   },
   {
-    title: "Your Trusted Hardware Partner",
-    description: "Quality building materials and expert consultancy services",
+    title: "Let's build together",
+    description: "Quality building, plumbing, electrical and hardware materials available instore and online.",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
+    button1: "Get a Quote Now",
+    button2: "More Info",
   },
   {
     title: "Complete IT Solutions",
     description: "Innovative technology services for individuals and enterprises",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+    button1: "Get a Quote Now",
+    button2: "More Info",
+  },
+  {
+    title: "Farm fresh products",
+    description: "Wholesome foods at your door step.",
+    image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=1200&q=80",
+    button1: "Get a Quote Now",
+    button2: "More Info",
   },
 ];
 
@@ -40,7 +53,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative min-h-screen bg-primary overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -48,27 +61,43 @@ const HeroCarousel = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
-          </div>
-          <div className="relative h-full container mx-auto px-4 flex items-center justify-center">
-            <div className="max-w-2xl text-white animate-fade-in text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-5 tracking-tight">{slide.title}</h1>
-              <p className="text-lg md:text-xl mb-8 text-gray-100 font-light leading-relaxed">{slide.description}</p>
-              <div className="flex gap-4 justify-center">
-                <Link to="/contact">
-                  <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white font-semibold shadow-lg px-6 py-3 text-base">
-                    Get a Quote Now
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline" className="bg-gray-200/20 hover:bg-gray-200/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm px-6 py-3 text-base font-medium">
-                    Contact Us
-                  </Button>
-                </Link>
+          <div className="container mx-auto px-4 py-20 h-full flex items-center pt-32">
+            <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+              {/* Text Content */}
+              <div className="space-y-8 animate-fade-in">
+                <div className="space-y-4">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    {slide.title}
+                  </h1>
+                  <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                    {slide.description}
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link to="/contact">
+                    <Button size="lg" className="text-primary-foreground font-semibold shadow-lg px-8 py-4 text-lg" style={{ backgroundColor: '#10d243' }}>
+                      {slide.button1}
+                    </Button>
+                  </Link>
+                  <Link to="/about">
+                    <Button size="lg" variant="outline" className="border-white text-primary bg-white hover:bg-gray-100 px-8 py-4 text-lg font-medium">
+                      {slide.button2}
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Image Content */}
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="w-full h-96 md:h-[420px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+                </div>
               </div>
             </div>
           </div>
@@ -78,17 +107,17 @@ const HeroCarousel = () => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors shadow-lg"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-6 w-6 text-white" />
+        <ChevronLeft className="h-6 w-6 text-gray-700" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors shadow-lg"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-6 w-6 text-white" />
+        <ChevronRight className="h-6 w-6 text-gray-700" />
       </button>
 
       {/* Indicators */}
@@ -98,7 +127,7 @@ const HeroCarousel = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-2 rounded-full transition-all ${
-              index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"
+              index === currentSlide ? "w-8 bg-primary" : "w-2 bg-gray-300"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

@@ -34,6 +34,10 @@ const Home = () => {
         "Online ordering and delivery services",
         "Home building consultancy",
         "3 locations: Green Corner, Chileka, and Airwing",
+        "Mobile money services",
+        "Agency banking solutions",
+        "Digital payment solutions",
+        "Financial accessibility services",
       ],
     },
     {
@@ -44,7 +48,9 @@ const Home = () => {
         "IT Service Management",
         "Computer Sales & Accessories",
         "Managed IT Services",
-        "Web Services & Data Analytics",
+        "Web Services",
+        "Data Analytics",
+        "Software Development",
       ],
     },
     {
@@ -56,17 +62,6 @@ const Home = () => {
         "Peanut Butter & Fortified Flour",
         "Farm produce: Maize, groundnuts, beans",
         "Irrigation equipment & services",
-      ],
-    },
-    {
-      title: "Magigo Mobile Money",
-      description: "Financial services including mobile banking and agency banking solutions.",
-      icon: Wallet,
-      details: [
-        "Mobile money services",
-        "Agency banking solutions",
-        "Digital payment solutions",
-        "Financial accessibility services",
       ],
     },
   ];
@@ -161,7 +156,7 @@ const Home = () => {
                   <img
                     src={getImageUrl(logo)}
                     alt={`Client/Partner ${index + 1}`}
-                    className="h-16 w-auto object-contain"
+                    className="h-20 w-auto object-contain"
                   />
                 </div>
               ))}
@@ -174,7 +169,7 @@ const Home = () => {
                   <img
                     src={getImageUrl(logo)}
                     alt={`Client/Partner ${index + 1}`}
-                    className="h-16 w-auto object-contain"
+                    className="h-20 w-auto object-contain"
                   />
                 </div>
               ))}
@@ -184,7 +179,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white relative" style={getBackgroundImageStyle("images/ready_to_work_with_us.jpg")}>
+      <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white relative" style={getBackgroundImageStyle("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80")}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>

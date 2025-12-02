@@ -11,6 +11,7 @@ import About from "./pages/About";
 import WhatWeDo from "./pages/WhatWeDo";
 import Newsletter from "./pages/Newsletter";
 import Contact from "./pages/Contact";
+import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,13 +21,17 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/magigo_website">
+      <BrowserRouter
+        basename={import.meta.env.BASE_URL.replace(/\/$/, "")}
+        future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+      >
         <Routes>
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/what-we-do" element={<WhatWeDo />} />
             <Route path="/newsletter" element={<Newsletter />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
           {/*  ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

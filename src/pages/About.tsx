@@ -9,9 +9,9 @@ const About = () => {
     "Customer Centricity",
     "Innovation",
     "Quality",
-    "Prudence",
     "Fairness",
     "Integrity",
+    "Prudence",
   ];
 
   return (
@@ -78,7 +78,7 @@ const About = () => {
                 <CardTitle className="text-xl font-medium mb-2 transition-colors duration-300 group-hover:text-primary">Vision</CardTitle>
               </CardHeader>
               <CardContent className="pt-1">
-                <p className="text-base leading-relaxed text-gray-600">
+                <p className="text-base leading-relaxed text-gray-600 text-center">
                   To become an effective and efficient business that provides products and services
                   for development of sustainable communities in Malawi and the region.
                 </p>
@@ -93,7 +93,7 @@ const About = () => {
                 <CardTitle className="text-xl font-medium mb-2 transition-colors duration-300 group-hover:text-primary">Mission</CardTitle>
               </CardHeader>
               <CardContent className="pt-1">
-                <p className="text-base leading-relaxed text-gray-600">
+                <p className="text-base leading-relaxed text-gray-600 text-center">
                   To innovate various sustainable solutions for communities within Malawi and the
                   region.
                 </p>
