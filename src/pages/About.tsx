@@ -17,7 +17,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative flex items-end justify-center pb-16 md:pb-20" style={getBackgroundImageStyle("images/ready_to_work_with_us.jpg")}>
+      <section className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative flex items-end justify-center pb-16 md:pb-20" style={getBackgroundImageStyle("images/join_cont01.avif")}>
         <div className="absolute inset-0 bg-black/75"></div>
         <div className="container mx-auto px-4 text-center relative z-10 w-full flex justify-center">
           <div className="max-w-4xl text-center">
@@ -127,7 +127,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Our Management Team</h2>
-            
+
             {/* CEO - Top Level */}
             <div className="flex justify-center mb-12">
               <Card className="max-w-sm h-full shadow-card hover:shadow-card-hover transition-all duration-300 animate-border group">
@@ -262,28 +262,28 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
               {[
-                { 
-                  year: "2010", 
+                {
+                  year: "2010",
                   event: "Founded Magigo Trading with IT services",
                   description: "Commenced operations with provision of IT services through our division of Magigo Systems, establishing our foundation in technology solutions."
                 },
-                { 
-                  year: "2016", 
+                {
+                  year: "2016",
                   event: "Expanded into agricultural produce trading",
                   description: "Diversified our business portfolio by entering the agricultural sector, trading in various farm produce and connecting farmers to markets."
                 },
-                { 
-                  year: "2019", 
+                {
+                  year: "2019",
                   event: "Opened first Magigo Hardware store in Green Corner",
                   description: "Moved into retail of building, plumbing, electrical and hardware materials in Green Corner, Blantyre, serving the construction industry."
                 },
-                { 
-                  year: "2021", 
+                {
+                  year: "2021",
                   event: "Opened Chileka branch",
                   description: "Expanded our hardware operations with a second branch in Chileka, Blantyre, increasing our reach and customer service capabilities."
                 },
-                { 
-                  year: "2023", 
+                {
+                  year: "2023",
                   event: "Opened Lilongwe branch and launched Seah Farms",
                   description: "Further expanded with our third branch in Area 58 (Airwing Fourways), Lilongwe, and created Seah Farms subsidiary producing dairy products and farm produce."
                 },
@@ -305,7 +305,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Arrow for progression - hidden on last card and on mobile */}
                   {index < 4 && (
                     <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
@@ -322,7 +322,7 @@ const About = () => {
       </section>
 
       {/* CTA Section - Work With Us */}
-      <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white relative" style={getBackgroundImageStyle("images/ready_to_work_with_us.jpg")}>
+      <section className="py-16 md:py-24 bg-cover bg-center bg-no-repeat text-white relative" style={getBackgroundImageStyle("images/join_cont01.avif")}>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>

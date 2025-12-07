@@ -9,13 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
-            <div className="mb-4">
-              <img
-                src={getImageUrl("images/MAGIGO-TRADING-COMPANY-02.jpg")}
-                alt="Magigo Trading Company Logo"
-                className="h-12 w-24"
-              />
-            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Magigo Trading Company</h3>
             <p className="text-sm text-gray-300">
               Providing sustainable development solutions to communities in Malawi and the region.
             </p>
@@ -37,7 +31,12 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/what-we-do" className="text-gray-300 hover:text-white transition-colors">
-                  What We Do
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="text-gray-300 hover:text-white transition-colors">
+                  Careers
                 </Link>
               </li>
               <li>
