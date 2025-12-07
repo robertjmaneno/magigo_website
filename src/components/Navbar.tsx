@@ -76,7 +76,7 @@ const Navbar = () => {
                   variant="ghost"
                   className={`text-sm font-medium transition-colors px-3 py-1.5 ${
                     isActive(link.path)
-                      ? "bg-primary/10 text-primary hover:bg-primary/20"
+                      ? "text-primary"
                       : "text-gray-700 hover:text-primary hover:bg-primary/5"
                   }`}
                 >
@@ -115,7 +115,7 @@ const Navbar = () => {
                     variant="ghost"
                     className={`w-full justify-start text-sm font-medium ${
                       isActive(link.path)
-                        ? "bg-primary/10 text-primary"
+                        ? "text-primary"
                         : "text-gray-700 hover:text-primary hover:bg-primary/5"
                     }`}
                   >

@@ -61,15 +61,15 @@ const HeroCarousel = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="container mx-auto px-4 py-20 h-full flex items-center pt-32">
+          <div className="container mx-auto px-4 py-20 h-full flex items-center pt-40">
             <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
               {/* Text Content */}
               <div className="space-y-8 animate-fade-in">
                 <div className="space-y-4">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight">
                     {slide.title}
                   </h1>
-                  <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                  <p className="text-base md:text-lg text-white/90 leading-relaxed">
                     {slide.description}
                   </p>
                 </div>
