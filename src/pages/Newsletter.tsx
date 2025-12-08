@@ -81,10 +81,10 @@ const Newsletter = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsletterStories.map((story, index) => (
-              <Card key={index} className="h-full shadow-card hover:shadow-card-hover transition-all duration-300 animate-border group">
+              <Card key={index} className="h-full shadow-card hover:shadow-card-hover transition-all duration-300 group">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110" style={{ border: '1.5px solid #B4A04C', backgroundColor: '#ffffff' }}>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110" style={{ border: '1.5px solid #238b45', backgroundColor: '#ffffff' }}>
                       <Calendar className="h-5 w-5 text-primary transition-colors duration-300 group-hover:text-primary" />
                     </div>
                     <span className="text-sm text-muted-foreground">
@@ -101,7 +101,7 @@ const Newsletter = () => {
                   <p className="text-muted-foreground mb-4">
                     {story.description}
                   </p>
-                  <Link to={`/news/${story.id}`}>
+                  <Link to={`/news/${story.id}`} onClick={(e) => e.stopPropagation()}>
                     <Button variant="outline" size="sm">
                       Read More
                     </Button>
