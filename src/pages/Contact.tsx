@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { toast } from "react-toastify";
 import { getBackgroundImageStyle } from "@/lib/imageUtils";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ const Contact = () => {
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -51,6 +54,11 @@ const Contact = () => {
       return;
     }
 
+    if (!recaptchaToken) {
+      toast.error("Please complete the reCAPTCHA verification");
+      return;
+    }
+
     setIsLoading(true);
 
     // Simulate API call
@@ -58,11 +66,17 @@ const Contact = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       toast.success("Message sent successfully! We'll get back to you soon.");
       setFormData({ name: "", email: "", subject: "", message: "" });
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
     } catch (error) {
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
   };
 
   const handleChange = (
@@ -140,6 +154,8 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              <div className="py-8"></div>
 
               {/* Branch Locations */}
               <div>
@@ -250,6 +266,14 @@ const Contact = () => {
                         placeholder="Tell us more about your inquiry..."
                         rows={6}
                         disabled={isLoading}
+                      />
+                    </div>
+
+                    <div className="flex justify-center">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                        onChange={handleRecaptchaChange}
                       />
                     </div>
 
