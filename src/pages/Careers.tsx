@@ -410,7 +410,7 @@ const Careers = () => {
               <Label htmlFor="general-name">Full Name *</Label>
               <Input
                 id="general-name"
-                placeholder="Robert Maneno"
+                placeholder="James Banda"
                 value={generalCVData.name}
                 onChange={(e) => setGeneralCVData({ ...generalCVData, name: e.target.value })}
               />
@@ -420,7 +420,7 @@ const Careers = () => {
               <Input
                 id="general-email"
                 type="email"
-                placeholder="robertjmaneno@gmail.com"
+                placeholder="example@gmail.com"
                 value={generalCVData.email}
                 onChange={(e) => setGeneralCVData({ ...generalCVData, email: e.target.value })}
               />

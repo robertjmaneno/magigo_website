@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import WhatWeDo from "./pages/WhatWeDo";
 import Newsletter from "./pages/Newsletter";
+import NewsStory from "./pages/NewsStory";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/what-we-do" element={<WhatWeDo />} />
             <Route path="/newsletter" element={<Newsletter />} />
+            <Route path="/news/:id" element={<NewsStory />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
