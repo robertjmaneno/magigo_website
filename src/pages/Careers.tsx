@@ -410,7 +410,7 @@ const Careers = () => {
               <Label htmlFor="general-name">Full Name *</Label>
               <Input
                 id="general-name"
-                placeholder="James Banda"
+                placeholder="James Bandai"
                 value={generalCVData.name}
                 onChange={(e) => setGeneralCVData({ ...generalCVData, name: e.target.value })}
               />

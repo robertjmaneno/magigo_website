@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { getBackgroundImageStyle } from "@/lib/imageUtils";
+import { getBackgroundImageStyle, getImageUrl } from "@/lib/imageUtils";
 
 const WhatWeDo = () => {
   return (
@@ -53,11 +53,22 @@ const WhatWeDo = () => {
 
             <TabsContent value="hardware" className="mt-8">
               <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Magigo Hardware</CardTitle>
-                  <CardDescription className="text-base">
-                    Your one-stop shop for all building and construction needs
-                  </CardDescription>
+                <CardHeader className="pb-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl mb-2">Magigo Hardware</CardTitle>
+                      <CardDescription className="text-base">
+                        Your one-stop shop for all building and construction needs
+                      </CardDescription>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <img 
+                        src={getImageUrl("images/Magigo Hardware Logo Redraw-01.jpg")} 
+                        alt="Magigo Hardware Logo" 
+                        className="h-24 w-auto object-contain"
+                      />
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div>
@@ -143,11 +154,22 @@ const WhatWeDo = () => {
 
             <TabsContent value="systems" className="mt-8">
               <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Magigo Systems</CardTitle>
-                  <CardDescription className="text-base">
-                    Complete IT solutions for the modern world
-                  </CardDescription>
+                <CardHeader className="pb-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl mb-2">Magigo Systems</CardTitle>
+                      <CardDescription className="text-base">
+                        Complete IT solutions for the modern world
+                      </CardDescription>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <img 
+                        src={getImageUrl("images/Magigo Systems Logo2.png")} 
+                        alt="Magigo Systems Logo" 
+                        className="h-24 w-auto object-contain"
+                      />
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div>
@@ -204,11 +226,22 @@ const WhatWeDo = () => {
 
             <TabsContent value="farms" className="mt-8">
               <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Seah Farms</CardTitle>
-                  <CardDescription className="text-base">
-                    Quality agricultural products and services
-                  </CardDescription>
+                <CardHeader className="pb-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl mb-2">Seah Farms</CardTitle>
+                      <CardDescription className="text-base">
+                        Quality agricultural products and services
+                      </CardDescription>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <img 
+                        src={getImageUrl("images/SEAH Farms.jpg")} 
+                        alt="Seah Farms Logo" 
+                        className="h-24 w-auto object-contain"
+                      />
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div>
@@ -308,11 +341,22 @@ const WhatWeDo = () => {
 
             <TabsContent value="mobile" className="mt-8">
               <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Magigo Mobile Money</CardTitle>
-                  <CardDescription className="text-base">
-                    Comprehensive financial services and digital payment solutions
-                  </CardDescription>
+                <CardHeader className="pb-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl mb-2">Magigo Mobile Money</CardTitle>
+                      <CardDescription className="text-base">
+                        Comprehensive financial services and digital payment solutions
+                      </CardDescription>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <img 
+                        src={getImageUrl("images/MAGIGO-TRADING-COMPANY-02.jpg")} 
+                        alt="Magigo Trading Company Logo" 
+                        className="h-24 w-auto object-contain"
+                      />
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div>
