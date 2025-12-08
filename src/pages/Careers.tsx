@@ -379,7 +379,7 @@ const Careers = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="py-8 md:py-12 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Don't See the Right Role?</h2>
           <p className="text-lg mb-8 text-muted-foreground max-w-2xl mx-auto">

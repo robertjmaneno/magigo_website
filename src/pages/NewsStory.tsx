@@ -143,29 +143,29 @@ const NewsStory = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="py-32 md:py-40 bg-cover bg-center bg-no-repeat text-white relative"
+        className="pt-24 pb-16 md:pt-28 md:pb-20 bg-cover bg-center bg-no-repeat text-white relative"
         style={getBackgroundImageStyle(story.image)}
       >
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <Link to="/newsletter">
-            <Button variant="ghost" className="text-white hover:bg-white/20 mb-6">
+            <Button variant="ghost" className="text-white hover:bg-white/20 mb-4">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Newsletter
             </Button>
           </Link>
           <div className="max-w-4xl">
-            <div className="inline-block px-3 py-1 bg-primary text-white text-sm font-medium rounded-full mb-4">
+            <div className="inline-block px-3 py-1 bg-primary text-white text-sm font-medium rounded-full mb-3">
               {story.category}
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{story.title}</h1>
-            <div className="flex flex-wrap items-center gap-6 text-white/90">
+            <h1 className="text-2xl md:text-3xl font-bold mb-3">{story.title}</h1>
+            <div className="flex flex-wrap items-center gap-4 text-sm text-white/90">
               <div className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
+                <Calendar className="h-4 w-4" />
                 <span>{story.date}</span>
               </div>
               <div className="flex items-center gap-2">
-                <User className="h-5 w-5" />
+                <User className="h-4 w-4" />
                 <span>{story.author}</span>
               </div>
             </div>
@@ -174,30 +174,19 @@ const NewsStory = () => {
       </section>
 
       {/* Article Content */}
-      <section className="py-16 md:py-24">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-none">
             <Card className="shadow-card">
               <CardContent className="p-8 md:p-12">
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                  <p className="text-xl text-muted-foreground mb-8 leading-relaxed font-semibold">
                     {story.description}
                   </p>
                   <div 
                     className="story-content"
                     dangerouslySetInnerHTML={{ __html: story.content }}
                   />
-                </div>
-
-                {/* Share Section */}
-                <div className="mt-12 pt-8 border-t">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold">Share this story</h3>
-                    <Button variant="outline" size="sm">
-                      <Share2 className="h-4 w-4 mr-2" />
-                      Share
-                    </Button>
-                  </div>
                 </div>
 
                 {/* Back to Newsletter */}
@@ -215,9 +204,9 @@ const NewsStory = () => {
       </section>
 
       {/* Related Stories */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-8 md:py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">More Stories</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">More Stories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {stories
               .filter(s => s.id !== id)

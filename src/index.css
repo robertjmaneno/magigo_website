@@ -253,7 +253,7 @@ All colors MUST be HSL.
 
   .story-content h3 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
     color: hsl(var(--foreground));
@@ -278,7 +278,7 @@ All colors MUST be HSL.
   }
 
   .story-content strong {
-    font-weight: 600;
+    font-weight: 700;
     color: hsl(var(--foreground));
   }
 }

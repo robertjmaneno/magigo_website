@@ -114,9 +114,9 @@ const Newsletter = () => {
       </section>
 
       {/* Subscribe Now Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-6 md:py-8 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Subscribe Now</h2>
           </div>
           <div className="max-w-md mx-auto">
