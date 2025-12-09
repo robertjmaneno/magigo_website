@@ -143,7 +143,7 @@ const Careers = () => {
     <div className="min-h-screen">
       {/* Application Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="sm:max-w-[650px]">
+        <DialogContent className="sm:max-w-[900px]">
           <DialogHeader>
             <DialogTitle>Submit Your Application (Step {currentStep} of 2)</DialogTitle>
             <DialogDescription>
@@ -152,7 +152,7 @@ const Careers = () => {
           </DialogHeader>
 
           {currentStep === 1 ? (
-            <div className="space-y-4 py-4">
+            <div className="space-y-3 py-3">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name *</Label>
                 <Input
@@ -187,12 +187,12 @@ const Careers = () => {
                 <Textarea
                   id="coverLetter"
                   placeholder="Tell us why you're a great fit for this position..."
-                  rows={4}
+                  rows={3}
                   value={formData.coverLetter}
                   onChange={(e) => setFormData({ ...formData, coverLetter: e.target.value })}
                 />
               </div>
-              <div className="flex justify-end gap-3 pt-4">
+              <div className="flex justify-end gap-3 pt-3">
                 <Button variant="outline" onClick={handleCloseModal}>
                   Cancel
                 </Button>
@@ -202,10 +202,10 @@ const Careers = () => {
               </div>
             </div>
           ) : (
-            <div className="space-y-4 py-4">
+            <div className="space-y-3 py-3">
               <div className="space-y-2">
                 <Label htmlFor="cv">Upload Your CV *</Label>
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-primary transition-colors">
                   <input
                     id="cv"
                     type="file"
@@ -214,7 +214,7 @@ const Careers = () => {
                     className="hidden"
                   />
                   <label htmlFor="cv" className="cursor-pointer">
-                    <Upload className="h-12 w-12 mx-auto mb-3 text-gray-400" />
+                    <Upload className="h-10 w-10 mx-auto mb-2 text-gray-400" />
                     {selectedFile ? (
                       <div className="space-y-2">
                         <p className="text-sm font-medium text-foreground">{selectedFile.name}</p>
@@ -397,7 +397,7 @@ const Careers = () => {
 
       {/* General CV Submission Modal */}
       <Dialog open={isGeneralCVModalOpen} onOpenChange={setIsGeneralCVModalOpen}>
-        <DialogContent className="sm:max-w-[650px]">
+        <DialogContent className="sm:max-w-[900px]">
           <DialogHeader>
             <DialogTitle>Submit Your CV</DialogTitle>
             <DialogDescription>
@@ -405,7 +405,7 @@ const Careers = () => {
             </DialogDescription>
           </DialogHeader>
 
-          <div className="space-y-4 py-4">
+          <div className="space-y-3 py-3">
             <div className="space-y-2">
               <Label htmlFor="general-name">Full Name *</Label>
               <Input
@@ -440,14 +440,14 @@ const Careers = () => {
               <Textarea
                 id="general-message"
                 placeholder="Tell us about your interests and career goals..."
-                rows={3}
+                rows={2}
                 value={generalCVData.message}
                 onChange={(e) => setGeneralCVData({ ...generalCVData, message: e.target.value })}
               />
             </div>
-            <div className="space-y-2">
+              <div className="space-y-2">
               <Label htmlFor="general-cv">Upload Your CV *</Label>
-              <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary transition-colors">
+              <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center hover:border-primary transition-colors">
                 <input
                   id="general-cv"
                   type="file"
@@ -455,8 +455,8 @@ const Careers = () => {
                   onChange={handleGeneralCVFileChange}
                   className="hidden"
                 />
-                <label htmlFor="general-cv" className="cursor-pointer">
-                  <Upload className="h-12 w-12 mx-auto mb-3 text-gray-400" />
+                  <label htmlFor="general-cv" className="cursor-pointer">
+                  <Upload className="h-10 w-10 mx-auto mb-2 text-gray-400" />
                   {generalCVFile ? (
                     <div className="space-y-2">
                       <p className="text-sm font-medium text-foreground">{generalCVFile.name}</p>
@@ -487,7 +487,7 @@ const Careers = () => {
                 </label>
               </div>
             </div>
-            <div className="flex justify-end gap-3 pt-4">
+            <div className="flex justify-end gap-3 pt-3">
               <Button variant="outline" onClick={() => setIsGeneralCVModalOpen(false)}>
                 Cancel
               </Button>
