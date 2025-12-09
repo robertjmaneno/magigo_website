@@ -21,7 +21,7 @@ const slides = [
   {
     title: "Complete IT Solutions",
     description: "Innovative technology services for individuals and enterprises",
-    image: "images/s3 (2).jpg",
+    image: "images/IT solutions.jpg",
     button1: "Get a Quote Now",
     button2: "More Info",
   },
