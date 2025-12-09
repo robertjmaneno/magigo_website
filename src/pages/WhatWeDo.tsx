@@ -1,4 +1,4 @@
-import { Building2, Cpu, Sprout, MapPin, Wallet } from "lucide-react";
+import { Building2, Cpu, Sprout, MapPin, Wallet, Hammer, Wrench, Zap, Truck, Home, Smartphone, Landmark, Package, Wheat, Droplets } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -73,40 +73,25 @@ const WhatWeDo = () => {
                 <CardContent className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Products & Services</h3>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-muted-foreground">
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Building materials
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Plumbing supplies
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Electrical materials
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Hardware tools
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Online ordering & delivery
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Home building consultancy
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Mobile money services
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Agency banking
-                      </li>
-                    </ul>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {[
+                        { icon: Hammer, title: "Building materials" },
+                        { icon: Wrench, title: "Plumbing supplies" },
+                        { icon: Zap, title: "Electrical materials" },
+                        { icon: Wrench, title: "Hardware tools" },
+                        { icon: Truck, title: "Online ordering & delivery" },
+                        { icon: Home, title: "Home building consultancy" },
+                        { icon: Smartphone, title: "Mobile money services" },
+                        { icon: Landmark, title: "Agency banking" },
+                      ].map((service, index) => (
+                        <Card key={index} className="bg-white">
+                          <CardContent className="p-4 text-center">
+                            <service.icon className="h-8 w-8 mx-auto mb-2 text-gray-500" />
+                            <p className="text-sm font-medium">{service.title}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
                   </div>
 
                   <div>
@@ -177,41 +162,52 @@ const WhatWeDo = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {[
                         {
+                          icon: Cpu,
                           title: "IT Service Management",
                           description: "Professional IT infrastructure management and support",
                         },
                         {
+                          icon: Cpu,
                           title: "Computer Sales",
                           description: "Latest computers and accessories for all needs",
                         },
                         {
+                          icon: Cpu,
                           title: "Managed IT Services",
                           description: "Comprehensive IT management for enterprises",
                         },
                         {
+                          icon: Cpu,
                           title: "IT Consultancy",
                           description: "Expert guidance for your technology decisions",
                         },
                         {
+                          icon: Cpu,
                           title: "Custom Solutions",
                           description: "Tailored IT solutions for unique requirements",
                         },
                         {
+                          icon: Cpu,
                           title: "Web Services",
                           description: "Website development and digital solutions",
                         },
                         {
+                          icon: Cpu,
                           title: "Data Analytics",
                           description: "Transform your data into actionable insights",
                         },
                         {
+                          icon: Cpu,
                           title: "Retail",
                           description: "Computer accessories and peripherals",
                         },
                       ].map((service, index) => (
                         <Card key={index} className="bg-secondary/50">
                           <CardHeader>
-                            <CardTitle className="text-base">{service.title}</CardTitle>
+                            <div className="flex items-center gap-3 mb-2">
+                              <service.icon className="h-6 w-6 text-gray-500" />
+                              <CardTitle className="text-base">{service.title}</CardTitle>
+                            </div>
                             <CardDescription className="text-sm">
                               {service.description}
                             </CardDescription>
@@ -246,94 +242,79 @@ const WhatWeDo = () => {
                 <CardContent className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Dairy Products</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-muted-foreground">
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Yoghurt
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Cream
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Cheese
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Fresh Milk
-                      </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {[
+                        { icon: Package, title: "Yoghurt" },
+                        { icon: Package, title: "Cream" },
+                        { icon: Package, title: "Cheese" },
+                        { icon: Package, title: "Fresh Milk" },
+                      ].map((product, index) => (
+                        <Card key={index} className="bg-white">
+                          <CardContent className="p-4 text-center">
+                            <product.icon className="h-8 w-8 mx-auto mb-2 text-gray-500" />
+                            <p className="text-sm font-medium">{product.title}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
                     </div>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Other Products</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-muted-foreground">
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Peanut Butter
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Fortified Flour
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Maize Flour
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Soya Products
-                      </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {[
+                        { icon: Package, title: "Peanut Butter" },
+                        { icon: Package, title: "Fortified Flour" },
+                        { icon: Package, title: "Maize Flour" },
+                        { icon: Package, title: "Soya Products" },
+                      ].map((product, index) => (
+                        <Card key={index} className="bg-white">
+                          <CardContent className="p-4 text-center">
+                            <product.icon className="h-8 w-8 mx-auto mb-2 text-gray-500" />
+                            <p className="text-sm font-medium">{product.title}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
                     </div>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Farm Produce</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-muted-foreground">
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Maize
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Ground nuts
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Beans
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Pigeon peas
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Bananas
-                      </div>
-                      <div className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Soya beans
-                      </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {[
+                        { icon: Wheat, title: "Maize" },
+                        { icon: Wheat, title: "Ground nuts" },
+                        { icon: Wheat, title: "Beans" },
+                        { icon: Wheat, title: "Pigeon peas" },
+                        { icon: Sprout, title: "Bananas" },
+                        { icon: Wheat, title: "Soya beans" },
+                      ].map((produce, index) => (
+                        <Card key={index} className="bg-white">
+                          <CardContent className="p-4 text-center">
+                            <produce.icon className="h-8 w-8 mx-auto mb-2 text-gray-500" />
+                            <p className="text-sm font-medium">{produce.title}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
                     </div>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Irrigation Services</h3>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Irrigation equipment supply
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Professional installation services
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        Ongoing maintenance and support
-                      </li>
-                    </ul>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {[
+                        { icon: Droplets, title: "Irrigation equipment supply" },
+                        { icon: Wrench, title: "Professional installation services" },
+                        { icon: Wrench, title: "Ongoing maintenance and support" },
+                      ].map((service, index) => (
+                        <Card key={index} className="bg-white">
+                          <CardContent className="p-4 text-center">
+                            <service.icon className="h-8 w-8 mx-auto mb-2 text-gray-500" />
+                            <p className="text-sm font-medium">{service.title}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -364,33 +345,42 @@ const WhatWeDo = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {[
                         {
+                          icon: Smartphone,
                           title: "Mobile Banking",
                           description: "Secure mobile banking services for convenient transactions",
                         },
                         {
+                          icon: Landmark,
                           title: "Agency Banking",
                           description: "Accessible banking services through authorized agents",
                         },
                         {
+                          icon: Smartphone,
                           title: "Digital Payments",
                           description: "Fast and secure digital payment solutions",
                         },
                         {
+                          icon: Smartphone,
                           title: "Money Transfers",
                           description: "Quick and reliable money transfer services",
                         },
                         {
+                          icon: Smartphone,
                           title: "Bill Payments",
                           description: "Convenient bill payment and utility services",
                         },
                         {
+                          icon: Smartphone,
                           title: "Financial Inclusion",
                           description: "Making financial services accessible to all communities",
                         },
                       ].map((service, index) => (
                         <Card key={index} className="bg-secondary/50">
                           <CardHeader>
-                            <CardTitle className="text-base">{service.title}</CardTitle>
+                            <div className="flex items-center gap-3 mb-2">
+                              <service.icon className="h-6 w-6 text-gray-500" />
+                              <CardTitle className="text-base">{service.title}</CardTitle>
+                            </div>
                             <CardDescription className="text-sm">
                               {service.description}
                             </CardDescription>
