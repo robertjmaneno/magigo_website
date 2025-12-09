@@ -75,18 +75,26 @@ const WhatWeDo = () => {
                     <h3 className="text-lg font-semibold mb-3">Products & Services</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                       {[
-                        { icon: Hammer, title: "Building materials" },
-                        { icon: Wrench, title: "Plumbing supplies" },
-                        { icon: Zap, title: "Electrical materials" },
-                        { icon: Wrench, title: "Hardware tools" },
-                        { icon: Truck, title: "Online ordering & delivery" },
-                        { icon: Home, title: "Home building consultancy" },
+                        { icon: "images/services/Building materials.png", title: "Building materials" },
+                        { icon: "images/services/plumbing-supplies-isometric-icon_9206-13072.avif", title: "Plumbing supplies" },
+                        { icon: "images/services/Electrical materials.avif", title: "Electrical materials" },
+                        { icon: "images/services/Hardware tools.avif", title: "Hardware tools" },
+                        { icon: "images/services/Online ordering & delivery.png", title: "Online ordering & delivery" },
+                        { icon: "images/services/Home building consultancy.png", title: "Home building consultancy" },
                         { icon: Smartphone, title: "Mobile money services" },
                         { icon: Landmark, title: "Agency banking" },
                       ].map((service, index) => (
                         <Card key={index} className="bg-white">
                           <CardContent className="p-4 text-center">
-                            <service.icon className="h-8 w-8 mx-auto mb-2 text-gray-500" />
+                            {typeof service.icon === 'string' ? (
+                              <img 
+                                src={getImageUrl(service.icon)} 
+                                alt={service.title} 
+                                className="h-8 w-8 mx-auto mb-2 object-contain" 
+                              />
+                            ) : (
+                              <service.icon className="h-8 w-8 mx-auto mb-2 text-gray-500" />
+                            )}
                             <p className="text-sm font-medium">{service.title}</p>
                           </CardContent>
                         </Card>
