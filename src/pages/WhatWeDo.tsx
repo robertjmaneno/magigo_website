@@ -1,4 +1,4 @@
-import { Building2, Cpu, Sprout, MapPin, Wallet, Hammer, Wrench, Zap, Truck, Home, Smartphone, Landmark, Package, Wheat, Droplets } from "lucide-react";
+import { Building2, Cpu, Sprout, MapPin, Wallet, Wrench, Smartphone, Landmark, Package, Wheat, Droplets } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -81,8 +81,8 @@ const WhatWeDo = () => {
                         { icon: "images/services/Hardware tools.avif", title: "Hardware tools" },
                         { icon: "images/services/Online ordering & delivery.png", title: "Online ordering & delivery" },
                         { icon: "images/services/Home building consultancy.png", title: "Home building consultancy" },
-                        { icon: Smartphone, title: "Mobile money services" },
-                        { icon: Landmark, title: "Agency banking" },
+                        { icon: "images/services/Mobile money services.jpg", title: "Mobile money services" },
+                        { icon: "images/services/Agency banking.avif", title: "Agency banking" },
                       ].map((service, index) => (
                         <Card key={index} className="bg-white">
                           <CardContent className="p-4 text-center">
