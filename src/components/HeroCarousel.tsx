@@ -28,7 +28,7 @@ const slides = [
   {
     title: "Farm fresh products",
     description: "Wholesome foods at your door step.",
-    image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=1200&q=80",
+    image: "/images/farms-farms.jpg",
     button1: "Get a Quote Now",
     button2: "More Info",
   },
