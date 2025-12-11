@@ -94,7 +94,7 @@ const Home = () => {
             </div>
             <div>
               <img
-                src={getImageUrl("images/trading_company.jpg")}
+                src={getImageUrl("images/MAGIGO-TRADING-COMPANY-02.jpg")}
                 alt="Magigo Trading Company"
                 className="w-full h-auto max-h-80 object-contain rounded-xl"
               />

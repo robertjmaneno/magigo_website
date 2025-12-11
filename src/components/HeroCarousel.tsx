@@ -7,7 +7,7 @@ const slides = [
   {
     title: "Building Sustainable Communities",
     description: "Providing comprehensive development solutions across Malawi",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
+    image: "/images/magigi.jpg",
     button1: "Get a Quote Now",
     button2: "More Info",
   },

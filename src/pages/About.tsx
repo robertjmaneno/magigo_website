@@ -35,7 +35,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img
-                src={getImageUrl("images/main_image_one.png")}
+                src={getImageUrl("images/MAGIGO-TRADING-COMPANY-02.jpg")}
                 alt="Magigo Trading"
                 className="w-5/6 h-auto mx-auto"
               />
